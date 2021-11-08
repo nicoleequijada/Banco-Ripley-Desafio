@@ -1,7 +1,8 @@
+import {Button} from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css';
 function NewRecipient () {
     return(
-        <h1>home</h1>,
-        <h2>jdjnnskc,</h2>
+        <Button variant="primary">Primary</Button>
     )
 }
 export default NewRecipient
