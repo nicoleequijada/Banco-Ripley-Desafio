@@ -1,0 +1,22 @@
+.bg-padre{
+   margin-left: 20%;
+   margin-top: 3%;
+}
+
+.div-transfers{
+    height: 70vh;
+    width: 60vw;
+    border-radius: 25px;
+    background-color: #894590;
+    text-align: center;
+    
+}
+.div-transfers h1{
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 30px;
+}
+.form{
+    width: 40%;
+    
+}

@@ -1,8 +1,13 @@
-import {Button} from 'react-bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import BgTransfers from '../components/BgTransfers/BgTransfers'
+import Header from '../components/Header/Header'
+
+
 function NewRecipient () {
     return(
-        <Button variant="primary">Primary</Button>
+        <>
+        <Header /> 
+        <BgTransfers />
+        </>
     )
 }
 export default NewRecipient

@@ -1,0 +1,15 @@
+.header{
+border: 1px solid #894590;
+padding: 4vh;
+}
+
+.img-logo{
+    width: 40vh;
+}
+
+.btn-outline-primary{
+    color: #fff;
+    background-color: #894590;
+    border-color: #894590;
+   
+}
