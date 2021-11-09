@@ -1,6 +1,7 @@
 .bg-padre{
    margin-left: 20%;
    margin-top: 3%;
+
 }
 
 .div-transfers{
@@ -9,6 +10,7 @@
     border-radius: 25px;
     background-color: #894590;
     text-align: center;
+    filter: drop-shadow(0 0 0.75rem rgb(82, 79, 80));
     
 }
 .div-transfers h1{
@@ -19,4 +21,10 @@
 .form{
     width: 40%;
     
+}
+.button-crear{
+    margin-top: 20px;
+}
+.mb-3{
+    margin-top: 10px;
 }

@@ -5,9 +5,12 @@ function Header () {
     return(
         <div className="header">
           <Link to="/"><img className="img-logo" src="https://i.postimg.cc/DzTkJ7Jp/Logo-Ripley-banco-2.png" alt="logo"/></Link> 
-          <Button variant="outline-primary">Nuevo Destinatario</Button>{' '}
-          <Button variant="outline-primary">Transferir</Button>{' '}
-          <Button variant="outline-primary">Historial</Button>{' '}
+          <div className="options">
+            <Link to="/"><Button variant="outline-warning">Nuevo Destinatario</Button>{' '}</Link>
+            <Link to="/transfer"><Button variant="outline-warning">Transferir</Button>{' '}</Link>
+            <Link to="/history"><Button variant="outline-warning">Historial</Button>{' '}</Link>
+          </div>
+          
         </div>
     )
 }

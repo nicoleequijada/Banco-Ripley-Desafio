@@ -1,15 +1,33 @@
 .header{
 border: 1px solid #894590;
 padding: 4vh;
+display: flex;
+flex-direction: row;
+}
+
+.header a{
+    margin:5px;
+}
+
+.header Button{
+    color: #894590;
+    border: 1px solid #894590; 
+    width: 100%;
+    font-size: 1rem;
 }
 
 .img-logo{
     width: 40vh;
 }
 
-.btn-outline-primary{
-    color: #fff;
-    background-color: #894590;
-    border-color: #894590;
-   
+.options{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 50%;
+
 }
+.btn-outline-warning{
+    margin-left: 5%;
+}
+
