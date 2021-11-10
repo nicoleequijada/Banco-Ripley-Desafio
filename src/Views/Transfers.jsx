@@ -1,9 +1,11 @@
 import Header from "../components/Header/Header"
+import Transferir from "../components/Transferir/Transferir"
 function Transfers () {
     return(
         <>
          <Header />
-        <h1>transferencias</h1>
+         <Transferir />
+       
         </>
     )
 }

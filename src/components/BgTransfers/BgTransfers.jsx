@@ -1,15 +1,15 @@
-import './BgTransfers.css'
 import {
     InputGroup, 
     FormControl, 
     Container, 
     Col, 
-    Row, 
-    Button
+    Row
 } from 'react-bootstrap'
+import CreateModal from '../Modal/CreateModal'
 
 function BgTransfers () {
     return(
+        <>
         <div className="bg-padre">
             <div className="div-transfers">
                 <h1>NUEVO DESTINATARIO</h1>
@@ -61,11 +61,12 @@ function BgTransfers () {
                     </Row>
                     
                 </Container>
-                <Button size="lg" className="button-crear" variant="warning">Crear</Button>{' '}
+                <CreateModal />
             </div>
             
         </div>
-        
+        </>
     )
 }
+
 export default BgTransfers

@@ -1,14 +1,12 @@
 .bg-padre{
-   margin-left: 20%;
-   margin-top: 3%;
-
+    margin-left: 20%;
+    margin-top: 3%;
+ 
 }
-
 .div-transfers{
     height: 70vh;
     width: 60vw;
     border-radius: 25px;
-    padding: 10px;
     background-color: #894590;
     text-align: center;
     filter: drop-shadow(0 0 0.75rem rgb(82, 79, 80));
@@ -18,14 +16,4 @@
     font-size: 1.5rem;
     color: #fff;
     padding: 30px;
-}
-.form{
-    width: 40%;
-    
-}
-
-.mb-3{
-    margin-top: 10px;
-    
-    margin-left: 10px;
 }
