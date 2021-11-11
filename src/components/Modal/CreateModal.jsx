@@ -4,6 +4,7 @@ import {
   Modal
 } from 'react-bootstrap';
 import { Link } from "react-router-dom";
+import './CreateModal.css';
 
 
 function CreateModal() {

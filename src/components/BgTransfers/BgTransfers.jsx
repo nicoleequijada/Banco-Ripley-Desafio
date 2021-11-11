@@ -6,6 +6,7 @@ import {
     Row
 } from 'react-bootstrap'
 import CreateModal from '../Modal/CreateModal'
+import './BgTransfers.css'
 
 function BgTransfers () {
     return(
