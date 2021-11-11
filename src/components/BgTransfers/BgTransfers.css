@@ -1,10 +1,10 @@
-.bg-padre{
+.bg-pather{
    margin-left: 20%;
    margin-top: 3%;
 
 }
 
-.div-transfers{
+.div-transf{
     height: 70vh;
     width: 60vw;
     border-radius: 25px;
@@ -14,14 +14,40 @@
     filter: drop-shadow(0 0 0.75rem rgb(82, 79, 80));
     
 }
-.div-transfers h1{
+.div-transf h1{
     font-size: 1.5rem;
     color: #fff;
     padding: 30px;
 }
 
-.form{
-    width: 40%;
-    
+@media (max-width: 800px){
+    .bg-pather{
+        margin-left: 10%;
+    }
+    .div-transf h1{
+        padding: 20px;
+        font-size: 1.2rem;
+    }
+    .div-transf span{
+        font-size: 0.7rem;
+    }
+    .div-transf{
+        width: 80vw;
+    }
 }
-
+@media (max-width: 500px){
+    .bg-pather{
+        margin-top: 5%;
+    }
+    .div-transf h1{
+        padding: 10px;
+        font-size: 1rem;
+    }
+    .div-transf{
+        width: 80vw;
+        height: 70vh;
+    }
+    .div-transf span{
+        font-size: 0.5rem;
+    }
+}

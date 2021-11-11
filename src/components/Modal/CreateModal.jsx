@@ -17,7 +17,7 @@ function CreateModal() {
     <>
     <div className="div-modal">
     <Button variant="warning" onClick={handleShow}>
-        CREAR
+       Crear
       </Button>
 
       <Modal show={show} onHide={handleClose}>

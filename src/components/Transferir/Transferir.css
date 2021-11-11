@@ -17,3 +17,11 @@
     color: #fff;
     padding: 30px;
 }
+@media (max-width: 800px){
+    .div-transfers{
+        width: 70vw;
+    }
+    .bg-padre{
+        margin-left: 15%;
+    }
+}

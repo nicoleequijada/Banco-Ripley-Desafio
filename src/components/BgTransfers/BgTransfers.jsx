@@ -11,8 +11,8 @@ import './BgTransfers.css'
 function BgTransfers () {
     return(
         <>
-        <div className="bg-padre">
-            <div className="div-transfers">
+        <div className="bg-pather">
+            <div className="div-transf">
                 <h1>NUEVO DESTINATARIO</h1>
                 <Container>
                     <Row>
@@ -54,7 +54,7 @@ function BgTransfers () {
                                  </InputGroup>
                         </Col>
                         <Col><InputGroup className="mb-3">
-                                <InputGroup.Text id="basic-addon1">Numero de cuenta</InputGroup.Text>
+                                <InputGroup.Text id="basic-addon1">N de cuenta</InputGroup.Text>
                                  <FormControl
                                      aria-describedby="basic-addon1"
                                  />

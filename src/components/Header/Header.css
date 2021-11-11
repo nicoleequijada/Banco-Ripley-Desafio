@@ -31,3 +31,37 @@ flex-direction: row;
     margin-left: 5%;
 }
 
+@media (max-width: 800px){
+    .header{
+        max-width: 100%;
+       
+    }
+    .header a{
+        margin:2px;
+    }
+    .header Button{
+        font-size: 0.6rem;
+    }
+    .img-logo{
+        width: 30vh;
+        margin-top: 20px;
+    }
+    .options{
+        margin-left: 40%;
+    }
+}
+@media (max-width: 500px){
+    .header{
+        max-width: 100%;  
+    }
+    .header Button{
+        font-size: 0.5rem;
+    }
+    .options{
+        margin-left: 8%;
+    }
+    .img-logo{
+        width: 25vh;
+        margin-top: 10px;
+    }
+}

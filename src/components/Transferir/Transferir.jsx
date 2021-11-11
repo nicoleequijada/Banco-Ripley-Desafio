@@ -17,7 +17,6 @@ function Transferir () {
                 </InputGroup>
                 </Col>
                 <Col>
-                <div>Lista</div>
                 </Col>
                 </Row>
                 
