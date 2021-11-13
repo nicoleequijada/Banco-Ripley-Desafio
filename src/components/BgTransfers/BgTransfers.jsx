@@ -11,19 +11,22 @@ import CreateModal from '../Modal/CreateModal'
 import './BgTransfers.css'
 import {useEffect, useState} from 'react'
 import getBankList from '../../utils/bankClient'
+import postRecipient from '../../utils/backendClient'
 
 function BgTransfers () {
     const [listBank , setListBank] = useState([])
     const handleSubmit = (event) => {
         event.preventDefault()
-        console.log(event.target.rut.value)
-        console.log(event.target.username.value)
-        console.log(event.target.email.value)
-        // console.log(event.target.banco.value)
-        console.log(event.target.type.value)
-        console.log(event.target.number.value)
-        console.log(listBank)
-        
+       const recipient = {
+            "rut": event.target.rut.value,
+            "name": event.target.username.value,
+            "email": event.target.email.value,
+            "bancoId": event.target.banco.value,
+            "type": event.target.type.value,
+            "accountNumber": event.target.number.value
+ 
+        }
+        postRecipient(recipient) 
     }
 
     
@@ -79,7 +82,7 @@ function BgTransfers () {
                                  </InputGroup>
                                 
                         </Col>
-                        <Col><Form.Select aria-label="Default select example">
+                        <Col><Form.Select aria-label="Default select example" name="banco">
                           {listBank && listBank.map((option) => {
                               return <option value={option.id}>{option.name}</option>
                           }
