@@ -8,7 +8,6 @@ function Transferir () {
                 <h1>Transferir</h1>
                 <Row>
                 <Col>
-                
                 <InputGroup className="mb-3">
                     <InputGroup.Text id="basic-addon1">Buscar Destinatario</InputGroup.Text>
                 <FormControl
