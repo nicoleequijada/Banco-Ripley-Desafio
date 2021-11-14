@@ -4,10 +4,8 @@ import {
     Container, 
     Col, 
     Row,
-    Form,
-    ListGroup
+    Form
 } from 'react-bootstrap'
-import CreateModal from '../Modal/CreateModal'
 import './BgTransfers.css'
 import {useEffect, useState} from 'react'
 import getBankList from '../../utils/bankClient'
@@ -17,19 +15,26 @@ function BgTransfers () {
     const [listBank , setListBank] = useState([])
     const handleSubmit = (event) => {
         event.preventDefault()
-       const recipient = {
+        const recipient = {
             "rut": event.target.rut.value,
             "name": event.target.username.value,
             "email": event.target.email.value,
+            "telefono":event.target.telefono.value,
             "bancoId": event.target.banco.value,
             "type": event.target.type.value,
             "accountNumber": event.target.number.value
  
         }
-        postRecipient(recipient) 
+        if(recipient.rut === "" || recipient.name === ""
+            || recipient.email === "" || recipient.telefono === ""
+            || recipient.accountNumber === ""){
+            alert('ingresa valores validos, tienes un campo sin llenar')
+        }else{
+            postRecipient(recipient) 
+        }
+        
     }
 
-    
 
     useEffect(() => {
         getBankList()
@@ -62,9 +67,7 @@ function BgTransfers () {
                                      aria-describedby="basic-addon1"
                                      type="text"
                                      name="username"
-                                 
-                                     
-                                    
+                   
                                  />
                                  </InputGroup></Col>
                     </Row>
@@ -75,46 +78,54 @@ function BgTransfers () {
                                      aria-describedby="basic-addon1"
                                      type="text"
                                      name="email"
-                                 
-                                    
-                                     
                                  />
                                  </InputGroup>
                                 
                         </Col>
+                        <Col>
+                        <InputGroup className="mb-3">
+                                <InputGroup.Text id="basic-addon1">Telefono</InputGroup.Text>
+                                 <FormControl
+                                     aria-describedby="basic-addon1"
+                                     type="text"
+                                     name="telefono"
+                   
+                                 />
+                                 </InputGroup>
+                        </Col>
+                        
+                    </Row>
+                    <Row>
+                        <Col> <Form.Select className="mb-3" aria-label="Default select example" name="type">
+                                <option value="Cuenta Corriente">Cuenta Corriente</option>
+                                <option value="Cuenta de Ahorro">Cuenta de Ahorro</option>
+                                <option value="Cuenta Vista">Cuenta Vista</option>
+                                
+
+                            </Form.Select>
+                        </Col>
                         <Col><Form.Select aria-label="Default select example" name="banco">
                           {listBank && listBank.map((option) => {
-                              return <option value={option.id}>{option.name}</option>
+                              return <option value={option.name}>{option.name}</option>
                           }
                           )}
                         
                             </Form.Select></Col>
-                    </Row>
-                    <Row>
-                        <Col> <InputGroup className="mb-3">
-                                <InputGroup.Text id="basic-addon1">Tipo de cuenta</InputGroup.Text>
-                                 <FormControl
-                                     aria-describedby="basic-addon1"
-                                     type="text"
-                                     name="type"
                         
-                                 />
-                                 </InputGroup>
-                        </Col>
-                        <Col><InputGroup className="mb-3">
-                                <InputGroup.Text id="basic-addon1">N de cuenta</InputGroup.Text>
+                    </Row>
+                    <Row><Col><InputGroup className="mb-3">
+                                <InputGroup.Text id="basic-addon1">Numero de cuenta</InputGroup.Text>
                                  <FormControl
                                      aria-describedby="basic-addon1"
                                      type="text"
                                      name="number"
                                  />
-                                 </InputGroup></Col>
-                    </Row>
-                    <button type="submit">Login</button>
+                                 </InputGroup></Col></Row>
+                   
+                    <button className="button-crear" type="submit">CREAR</button>
                     </Form>
                 </Container>
                 
-                <CreateModal />
             </div>
             
         </div>

@@ -6,6 +6,7 @@
 .div-transfers{
     height: 70vh;
     width: 60vw;
+    padding: 10px;
     border-radius: 25px;
     background-color: #894590;
     text-align: center;
@@ -15,7 +16,19 @@
 .div-transfers h1{
     font-size: 1.5rem;
     color: #fff;
-    padding: 30px;
+    padding: 5px;
+}
+.div-recipient p{ 
+    background-color: #fff;
+    height: 20vh;
+    width: 10px;
+}
+.button-transferir{
+    background-color: #FFC108;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #fff;
+    margin-top: 10px;
 }
 @media (max-width: 800px){
     .div-transfers{

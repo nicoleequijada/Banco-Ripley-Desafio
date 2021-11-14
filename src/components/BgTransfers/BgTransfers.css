@@ -19,6 +19,14 @@
     color: #fff;
     padding: 30px;
 }
+.button-crear{
+background-color: #FFC108;
+padding: 10px;
+border-radius: 15px;
+border: 1px solid #fff;
+
+
+}
 
 @media (max-width: 800px){
     .bg-pather{
@@ -28,7 +36,7 @@
         padding: 20px;
         font-size: 1.2rem;
     }
-    .div-transf span{
+    .div-transf span select{
         font-size: 0.7rem;
     }
     .div-transf{
@@ -47,7 +55,7 @@
         width: 80vw;
         height: 70vh;
     }
-    .div-transf span{
+    .div-transf span select{
         font-size: 0.5rem;
     }
 }
