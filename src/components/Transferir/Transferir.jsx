@@ -31,6 +31,9 @@ function Transferir () {
     useEffect(() => {
        getClients()
         .then((getList) => {
+            
+                setSelectedClient(getList[0])
+           
             setGetList(getList)
          console.log(getList)
         })
@@ -50,7 +53,9 @@ function Transferir () {
            "bancoId": selectedClient.bancoId,
            "monto": event.target.monto.value
         }
-            
+            if(event.target.monto.value === "" || event.target.monto.value === "0"){
+                alert('ingresa un monto valido')
+            }
         createTransfers(dataTransfers)
     }
 
@@ -64,7 +69,7 @@ function Transferir () {
                 <Col>
                 <Form.Select id="form-select" onChange={showClient} aria-label="Default select example" name="nameClient">
                           {getList && getList.map((option) => {
-                              return <option value={option._id}>{option.name}</option>
+                              return <option value={option._id}>Destinatario: {option.name} {option.bancoId} </option>
                           }
                           )}
                             </Form.Select>
@@ -74,16 +79,16 @@ function Transferir () {
                 <Row>
                     <Col>
                     <ListGroup>
-                        <ListGroup.Item>{selectedClient.name}</ListGroup.Item>
-                        <ListGroup.Item>{selectedClient.email}</ListGroup.Item>
-                        <ListGroup.Item>{selectedClient.type}</ListGroup.Item>
-                        <ListGroup.Item>{selectedClient.accountNumber}</ListGroup.Item>
+                        <ListGroup.Item>Nombre: {selectedClient.name}</ListGroup.Item>
+                        <ListGroup.Item>Email: {selectedClient.email}</ListGroup.Item>
+                        <ListGroup.Item>Tipo de cuenta: {selectedClient.type}</ListGroup.Item>
+                        <ListGroup.Item>Numero de Cuenta: {selectedClient.accountNumber}</ListGroup.Item>
                         
                     </ListGroup>
                     </Col>
                     <Col>
-                    <ListGroup.Item>{selectedClient.rut}</ListGroup.Item>
-                    <ListGroup.Item>{selectedClient.telefono}</ListGroup.Item>
+                    <ListGroup.Item>Rut: {selectedClient.rut}</ListGroup.Item>
+                    <ListGroup.Item> Telefono: {selectedClient.telefono}</ListGroup.Item>
                     <ListGroup.Item>{selectedClient.bancoId}</ListGroup.Item>
                     
                     </Col>
@@ -97,7 +102,7 @@ function Transferir () {
                 />
                 </InputGroup></Col>
                 </Row>
-                <button type="submite" className="button-transferir" >Transferir</button>
+                <button type="submit" className="button-transferir" >Transferir</button>
                 </Form>
                 
                 

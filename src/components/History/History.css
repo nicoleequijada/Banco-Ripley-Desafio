@@ -1,0 +1,19 @@
+.div-init{
+    margin-left: 20%;
+    margin-top: 3%;   
+}
+.div-history{
+    height: 70vh;
+    width: 60vw;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #894590;
+    text-align: center;
+    filter: drop-shadow(0 0 0.75rem rgb(82, 79, 80));
+}
+
+.div-history h1{
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 5px;
+}

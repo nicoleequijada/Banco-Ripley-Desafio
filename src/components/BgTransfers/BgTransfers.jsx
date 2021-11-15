@@ -30,11 +30,17 @@ function BgTransfers () {
             || recipient.accountNumber === ""){
             alert('ingresa valores validos, tienes un campo sin llenar')
         }else{
-            postRecipient(recipient) 
+            postRecipient(recipient).then((data) => {
+                alert("se creo el destinatario")
+                document.getElementById('form').reset()
+            }).catch((error)=>{
+                alert("no se pudo crear destinatario")
+            })
         }
         
     }
 
+   
 
     useEffect(() => {
         getBankList()
@@ -49,7 +55,7 @@ function BgTransfers () {
             <div className="div-transf">
                 <h1>NUEVO DESTINATARIO</h1>
                 <Container>
-                <Form onSubmit={handleSubmit}>
+                <Form id="form" onSubmit={handleSubmit}>
                     <Row>
                         <Col> <InputGroup className="mb-3">
                                 <InputGroup.Text id="basic-addon1">Rut</InputGroup.Text>
@@ -122,7 +128,7 @@ function BgTransfers () {
                                  />
                                  </InputGroup></Col></Row>
                    
-                    <button className="button-crear" type="submit">CREAR</button>
+                    <button  className="button-crear" type="submit">CREAR</button>
                     </Form>
                 </Container>
                 

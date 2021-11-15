@@ -1,9 +1,11 @@
 import Header from "../components/Header/Header"
+import History from "../components/History/History"
+
 function HistoryTransfer (){
     return(
         <>
         <Header />
-        <h1>HistoryTransfer</h1>
+        <History />
         </>
     )
    
