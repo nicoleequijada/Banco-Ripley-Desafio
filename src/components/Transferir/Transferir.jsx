@@ -55,8 +55,15 @@ function Transferir () {
         }
             if(event.target.monto.value === "" || event.target.monto.value === "0"){
                 alert('ingresa un monto valido')
+            }else{
+                createTransfers(dataTransfers).then((data) => {
+                    alert("se realizo la transferencia con exito")
+                    document.getElementById('form').reset()
+                })
             }
-        createTransfers(dataTransfers)
+        
+
+       
     }
 
     return(
@@ -64,7 +71,7 @@ function Transferir () {
         <div className="bg-padre">
             <div className="div-transfers">
                 <h1>TRANSFERIR</h1>
-                <Form onSubmit={handleSubmitTrans}>
+                <Form id="form" onSubmit={handleSubmitTrans}>
                 <Row>
                 <Col>
                 <Form.Select id="form-select" onChange={showClient} aria-label="Default select example" name="nameClient">
@@ -87,10 +94,11 @@ function Transferir () {
                     </ListGroup>
                     </Col>
                     <Col>
+                    <ListGroup>
                     <ListGroup.Item>Rut: {selectedClient.rut}</ListGroup.Item>
                     <ListGroup.Item> Telefono: {selectedClient.telefono}</ListGroup.Item>
                     <ListGroup.Item>{selectedClient.bancoId}</ListGroup.Item>
-                    
+                    </ListGroup>
                     </Col>
                           
                 </Row>
